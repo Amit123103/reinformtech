@@ -60,7 +60,7 @@ export function Services() {
   const yParallax = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section ref={sectionRef} id="services" className="relative pt-12 lg:pt-16 pb-12 lg:pb-16 bg-[var(--color-background)] overflow-hidden">
+    <section ref={sectionRef} id="services" className="relative pt-8 lg:pt-10 pb-12 lg:pb-16 bg-[var(--color-background)] overflow-hidden">
       {/* Animated Parallax Background Elements */}
       <motion.div 
         style={{ y: yParallax }} 

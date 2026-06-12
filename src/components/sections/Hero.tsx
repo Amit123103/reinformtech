@@ -24,7 +24,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-20 pb-8 lg:pt-24 lg:pb-12 bg-[var(--color-background)] overflow-hidden flex flex-col justify-start">
+    <section className="relative pt-20 pb-4 lg:pt-24 lg:pb-6 bg-[var(--color-background)] overflow-hidden flex flex-col justify-start">
       {/* Subtle Tech Background Image */}
       <div className="absolute inset-0 z-0 opacity-15 pointer-events-none mix-blend-multiply">
         {backgroundImages.map((src, index) => (
