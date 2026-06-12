@@ -53,7 +53,8 @@ export function Services() {
             eyebrow="Our Services"
             title="What we do best"
             description="We don't do everything, but what we do, we do really well. Here's how we can help you build your next idea."
-            className="mb-16"
+            align="center"
+            className="mb-12 md:mb-16 [&_h2]:text-xl [&_h2]:md:text-2xl [&_p]:text-sm [&_p]:md:text-base max-w-2xl mx-auto"
           />
         </AnimateOnScroll>
 
