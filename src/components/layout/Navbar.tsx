@@ -48,7 +48,10 @@ export function Navbar() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
               <img src="/logo.png" alt="TechZen Logo" className="h-10 w-10 object-cover rounded-full mix-blend-multiply" />
-              <span className="text-xl font-extrabold tracking-tight text-[var(--color-primary)]">TechZen</span>
+              <div className="text-2xl font-extrabold tracking-tighter">
+                <span className="text-[var(--color-primary)]">Tech</span>
+                <span className="text-[var(--color-accent)] font-serif italic font-semibold">Zen</span>
+              </div>
             </Link>
           </div>
 
@@ -103,7 +106,10 @@ export function Navbar() {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
               <img src="/logo.png" alt="TechZen Logo" className="h-10 w-10 object-cover rounded-full mix-blend-multiply" />
-              <span className="text-xl font-extrabold tracking-tight text-[var(--color-primary)]">TechZen</span>
+              <div className="text-2xl font-extrabold tracking-tighter">
+                <span className="text-[var(--color-primary)]">Tech</span>
+                <span className="text-[var(--color-accent)] font-serif italic font-semibold">Zen</span>
+              </div>
             </Link>
             <button
               type="button"

@@ -75,7 +75,10 @@ export function Footer() {
           <div className="space-y-8 xl:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <img src="/logo.png" alt="TechZen Logo" className="h-10 w-10 object-cover rounded-full mix-blend-multiply" />
-              <span className="text-xl font-extrabold tracking-tight text-[var(--color-primary)]">TechZen</span>
+              <div className="text-2xl font-extrabold tracking-tighter">
+                <span className="text-[var(--color-primary)]">Tech</span>
+                <span className="text-[var(--color-accent)] font-serif italic font-semibold">Zen</span>
+              </div>
             </Link>
             <p className="text-sm leading-6 text-[var(--color-muted)] max-w-xs">
               Building scalable, enterprise-grade software solutions for modern businesses outgrowing their tech stack.
