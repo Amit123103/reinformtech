@@ -12,7 +12,7 @@ const stats = [
 
 export function TrustSignals() {
   return (
-    <section className="py-12 border-y border-[var(--color-border)] bg-[var(--color-background)]">
+    <section className="py-8 lg:py-10 border-y border-[var(--color-border)] bg-[var(--color-background)]">
       <Container>
         <AnimateOnScroll variants={staggerContainer}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-0">
@@ -33,7 +33,7 @@ export function TrustSignals() {
             ))}
           </div>
 
-          <div className="mt-16 pt-16 border-t border-[var(--color-border)] text-center">
+          <div className="mt-10 pt-10 border-t border-[var(--color-border)] text-center">
             <AnimateOnScroll variants={fadeUp}>
               <p className="text-sm font-semibold text-[var(--color-muted)] uppercase tracking-widest mb-8">
                 Industry Certifications & Partnerships

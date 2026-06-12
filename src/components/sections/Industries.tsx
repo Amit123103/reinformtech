@@ -40,7 +40,7 @@ const industries = [
 
 export function Industries() {
   return (
-    <section className="py-24 lg:py-32 bg-[var(--color-background)]">
+    <section className="pt-12 lg:pt-16 pb-24 lg:pb-32 bg-[var(--color-background)]">
       <Container>
         <AnimateOnScroll>
           <SectionHeading
