@@ -52,8 +52,8 @@
   :root {
     --primary: #1C1917;
     --secondary: #44403C;
-    --accent: #7C3AED; /* Vibrant purple accent */
-    --accent-hover: #6D28D9;
+    --accent: #BA9B54; /* Gold accent */
+    --accent-hover: #A38545;
     --background: #FFFFFF;
     --surface: #FAFAFA;
     --border: #EAEAEA;
@@ -64,8 +64,8 @@
   .dark {
     --primary: #FFFFFF;
     --secondary: #A3A3A3;
-    --accent: #8B5CF6; /* Lighter purple for dark mode */
-    --accent-hover: #A78BFA;
+    --accent: #D1B370; /* Lighter gold for dark mode */
+    --accent-hover: #E5C988;
     --background: #000000;
     --surface: #111111;
     --border: #333333;
