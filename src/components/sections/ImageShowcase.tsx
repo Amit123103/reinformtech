@@ -30,35 +30,37 @@ export function ImageShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Side: Company Details */}
-          <AnimateOnScroll variants={fadeUp} delay={0.1} className="flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] mb-6 shadow-sm w-max">
-              <span className="flex h-2 w-2 rounded-full bg-[var(--color-accent)]"></span>
-              <span className="text-xs font-semibold tracking-wide text-[var(--color-secondary)] uppercase">
+          <AnimateOnScroll variants={fadeUp} delay={0.1} className="flex flex-col justify-center pr-0 lg:pr-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] mb-4 shadow-sm w-max">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]"></span>
+              <span className="text-[10px] font-bold tracking-widest text-[var(--color-secondary)] uppercase">
                 About Us
               </span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--color-primary)] mb-6">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-[var(--color-primary)] mb-4 leading-tight">
               Building the future of digital products.
             </h2>
             
-            <p className="text-base md:text-lg text-[var(--color-muted)] mb-6 leading-relaxed">
-              We are a dedicated team of digital craftsmen passionate about building scalable, high-performance software. Our mission is to transform complex business challenges into elegant, intuitive digital solutions.
-            </p>
+            <div className="space-y-4">
+              <p className="text-sm text-[var(--color-primary)]/80 font-medium leading-relaxed">
+                We are a dedicated team of digital craftsmen passionate about building scalable, high-performance software. Our mission is to transform complex business challenges into elegant, intuitive digital solutions.
+              </p>
+              
+              <p className="text-sm text-[var(--color-primary)]/80 font-medium leading-relaxed">
+                With years of experience across various industries, we combine cutting-edge technology with human-centric design. We don't just write code; we partner with you to understand your goals and deliver products that drive real growth and efficiency for your enterprise.
+              </p>
+            </div>
             
-            <p className="text-base md:text-lg text-[var(--color-muted)] mb-8 leading-relaxed">
-              With years of experience across various industries, we combine cutting-edge technology with human-centric design. We don't just write code; we partner with you to understand your goals and deliver products that drive real growth and efficiency for your enterprise.
-            </p>
-            
-            <div className="flex gap-8 items-center border-t border-[var(--color-border)] pt-8">
+            <div className="flex gap-6 items-center border-t border-[var(--color-border)] mt-8 pt-6">
                <div className="flex flex-col">
-                  <span className="text-3xl font-extrabold text-[var(--color-primary)]">10+</span>
-                  <span className="text-xs text-[var(--color-muted)] uppercase tracking-wider font-semibold mt-1">Years Experience</span>
+                  <span className="text-2xl font-extrabold text-[var(--color-primary)]">10+</span>
+                  <span className="text-[10px] text-[var(--color-primary)]/70 uppercase tracking-widest font-bold mt-1">Years Experience</span>
                </div>
-               <div className="w-px h-12 bg-[var(--color-border)]"></div>
+               <div className="w-px h-8 bg-[var(--color-border)]"></div>
                <div className="flex flex-col">
-                  <span className="text-3xl font-extrabold text-[var(--color-primary)]">150+</span>
-                  <span className="text-xs text-[var(--color-muted)] uppercase tracking-wider font-semibold mt-1">Projects Delivered</span>
+                  <span className="text-2xl font-extrabold text-[var(--color-primary)]">150+</span>
+                  <span className="text-[10px] text-[var(--color-primary)]/70 uppercase tracking-widest font-bold mt-1">Projects Delivered</span>
                </div>
             </div>
           </AnimateOnScroll>
