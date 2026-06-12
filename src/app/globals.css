@@ -52,8 +52,8 @@
   :root {
     --primary: #1C1917;
     --secondary: #44403C;
-    --accent: #000000; /* Shifted to more professional monochrome + blue accent for Stripe/Linear feel */
-    --accent-hover: #333333;
+    --accent: #7C3AED; /* Vibrant purple accent */
+    --accent-hover: #6D28D9;
     --background: #FFFFFF;
     --surface: #FAFAFA;
     --border: #EAEAEA;
@@ -64,8 +64,8 @@
   .dark {
     --primary: #FFFFFF;
     --secondary: #A3A3A3;
-    --accent: #FFFFFF;
-    --accent-hover: #E5E5E5;
+    --accent: #8B5CF6; /* Lighter purple for dark mode */
+    --accent-hover: #A78BFA;
     --background: #000000;
     --surface: #111111;
     --border: #333333;
