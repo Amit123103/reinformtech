@@ -1,22 +1,22 @@
 "use client";
 
-import { Phone } from "lucide-react";
+import { Phone, Instagram } from "lucide-react";
 
 export function FloatingContact() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
       {/* WhatsApp Button */}
       <a 
         href="https://wa.me/1234567890" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 group"
+        className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 hover:shadow-lg transition-all duration-300"
         aria-label="Chat on WhatsApp"
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          width="28" 
-          height="28" 
+          width="20" 
+          height="20" 
           viewBox="0 0 24 24" 
           fill="none" 
           stroke="currentColor" 
@@ -29,13 +29,24 @@ export function FloatingContact() {
         </svg>
       </a>
 
+      {/* Instagram Button */}
+      <a 
+        href="https://instagram.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="w-10 h-10 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 hover:shadow-lg transition-all duration-300"
+        aria-label="Follow us on Instagram"
+      >
+        <Instagram className="w-5 h-5" />
+      </a>
+
       {/* Phone Button */}
       <a 
         href="tel:+1234567890" 
-        className="w-14 h-14 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+        className="w-10 h-10 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 hover:shadow-lg transition-all duration-300"
         aria-label="Call Us"
       >
-        <Phone className="w-6 h-6" />
+        <Phone className="w-5 h-5" />
       </a>
     </div>
   );
