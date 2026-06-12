@@ -6,17 +6,37 @@ import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { fadeUp } from "@/lib/animations";
 
+const backgroundImages = [
+  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80",
+  "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80",
+  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80",
+  "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80",
+];
+
 export function Hero() {
+  const [currentBg, setCurrentBg] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % backgroundImages.length);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative pt-20 pb-16 lg:pt-24 lg:pb-24 bg-[var(--color-background)] overflow-hidden flex flex-col justify-start">
       {/* Subtle Tech Background Image */}
       <div className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none mix-blend-multiply">
-        <img 
-          src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
-          alt="Technology Background" 
-          className="w-full h-full object-cover" 
-        />
+        {backgroundImages.map((src, index) => (
+          <img 
+            key={src}
+            src={src} 
+            alt="Technology Background" 
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentBg ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
       </div>
 
       {/* Subtle Grid Background */}
