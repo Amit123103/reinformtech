@@ -137,8 +137,8 @@ export function Process() {
               />
             </AnimatePresence>
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1112]/80 via-transparent to-transparent pointer-events-none" />
+            {/* Full Overlay */}
+            <div className="absolute inset-0 bg-[#1A1112]/30 pointer-events-none transition-colors duration-500" />
             
             <AnimatePresence mode="wait">
               <motion.div
