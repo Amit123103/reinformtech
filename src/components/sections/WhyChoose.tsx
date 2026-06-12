@@ -47,15 +47,15 @@ export function WhyChoose() {
               description="We're builders at heart. We don't just write code; we care about the success of your business. Here's what you can expect when you partner with us."
               className="mb-8"
             />
-            <div className="flex gap-4">
+            <div className="flex gap-6 mt-4">
               <div className="flex flex-col">
-                <span className="text-4xl font-bold text-[var(--color-primary)] mb-1">98%</span>
-                <span className="text-sm font-medium text-[var(--color-muted)]">Client Retention</span>
+                <span className="text-3xl font-bold text-[var(--color-primary)] mb-1">98%</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Client Retention</span>
               </div>
-              <div className="w-px h-16 bg-[var(--color-border)] mx-4" />
+              <div className="w-px h-12 bg-[var(--color-border)] mx-2" />
               <div className="flex flex-col">
-                <span className="text-4xl font-bold text-[var(--color-primary)] mb-1">200+</span>
-                <span className="text-sm font-medium text-[var(--color-muted)]">Projects Shipped</span>
+                <span className="text-3xl font-bold text-[var(--color-primary)] mb-1">200+</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Projects Shipped</span>
               </div>
             </div>
           </AnimateOnScroll>
