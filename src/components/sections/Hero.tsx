@@ -46,7 +46,26 @@ export function Hero() {
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-64 h-64 bg-[#D58386] rounded-full mix-blend-multiply filter blur-[80px] animate-blob animation-delay-4000"></div>
       </div>
 
-      <Container className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
+      <Container className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center pt-8">
+        {/* Top scrolling heading */}
+        <AnimateOnScroll variants={fadeUp} delay={0.05} className="w-full max-w-[100vw] overflow-hidden relative select-none mb-10">
+          <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
+          
+          <div className="flex gap-8 w-max animate-scroll-right">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex gap-8 items-center px-4">
+                {["Custom SaaS Platforms", "Enterprise Web Apps", "Native iOS & Android", "Cloud Infrastructures", "UI/UX System Design", "AI & Workflow Automation"].map((text, idx) => (
+                  <span key={idx} className="text-sm font-bold tracking-widest text-[var(--color-primary)]/70 uppercase flex items-center gap-8">
+                    {text}
+                    <span className="text-[var(--color-accent)] text-lg">✦</span>
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </AnimateOnScroll>
+
         <AnimateOnScroll variants={fadeUp} delay={0.1}>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] mb-6 shadow-sm">
             <span className="flex h-2 w-2 rounded-full bg-[var(--color-accent)]"></span>
