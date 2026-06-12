@@ -35,8 +35,8 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[var(--color-background)]/80 backdrop-blur-md shadow-[var(--shadow-nav)] py-2"
-          : "bg-transparent py-3"
+          ? "bg-[var(--color-background)]/80 backdrop-blur-md shadow-sm border-b border-black/10 bg-black/5 py-1"
+          : "bg-black/5 backdrop-blur-sm border-b border-black/5 py-2"
       )}
     >
       <Container>
@@ -47,8 +47,8 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-              <img src="/logo.png" alt="TechZen Logo" className="h-10 w-10 object-cover rounded-full mix-blend-multiply" />
-              <div className="text-2xl font-extrabold tracking-tighter">
+              <img src="/logo.png" alt="TechZen Logo" className="h-8 w-8 object-cover rounded-full mix-blend-multiply" />
+              <div className="text-xl font-extrabold tracking-tighter">
                 <span className="text-[var(--color-primary)]">Tech</span>
                 <span className="text-[var(--color-accent)] font-serif italic font-semibold">Zen</span>
               </div>
@@ -105,8 +105,8 @@ export function Navbar() {
         >
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-              <img src="/logo.png" alt="TechZen Logo" className="h-10 w-10 object-cover rounded-full mix-blend-multiply" />
-              <div className="text-2xl font-extrabold tracking-tighter">
+              <img src="/logo.png" alt="TechZen Logo" className="h-8 w-8 object-cover rounded-full mix-blend-multiply" />
+              <div className="text-xl font-extrabold tracking-tighter">
                 <span className="text-[var(--color-primary)]">Tech</span>
                 <span className="text-[var(--color-accent)] font-serif italic font-semibold">Zen</span>
               </div>
