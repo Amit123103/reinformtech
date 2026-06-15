@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col antialiased selection:bg-[var(--color-text)] selection:text-[var(--color-background)] relative" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

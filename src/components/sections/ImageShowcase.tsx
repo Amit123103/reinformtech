@@ -49,9 +49,9 @@ export function ImageShowcase() {
           
           {/* Left Side: Company Details */}
           <AnimateOnScroll variants={fadeUp} delay={0.1} className="flex flex-col justify-center pr-0 lg:pr-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] mb-4 shadow-sm w-max">
-              <span className="flex h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]"></span>
-              <span className="text-[10px] font-bold tracking-widest text-[var(--color-secondary)] uppercase">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D65A7C]/10 border border-[#D65A7C]/20 mb-4 shadow-sm w-max">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-[#D65A7C]"></span>
+              <span className="text-[10px] font-bold tracking-widest text-[#D65A7C] uppercase">
                 About Us
               </span>
             </div>
