@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase/server';
-import { sendEmail } from '@/lib/email';
+import { sendEmail, getEmailTemplate } from '@/lib/email';
 
 export async function POST(request: Request) {
   try {
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     await sendEmail({
       to: 'reinformtech@gmail.com', // Admin email
       subject: `New Project Request from ${data.name}`,
-      html: adminHtml,
+      html: getEmailTemplate(adminHtml),
     });
 
     // 3. Send Auto-Reply to Client
@@ -54,13 +54,12 @@ export async function POST(request: Request) {
       <br/>
       <p>Best regards,</p>
       <p><strong>The ReInformTech Team</strong></p>
-      <p><a href="https://reinformtech.com">reinformtech.com</a></p>
     `;
 
     await sendEmail({
       to: data.email, // Client email
       subject: 'We received your project request - ReInformTech',
-      html: clientHtml,
+      html: getEmailTemplate(clientHtml),
     });
 
     return NextResponse.json({ success: true, id: docId });

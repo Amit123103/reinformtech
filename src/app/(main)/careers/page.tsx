@@ -1,13 +1,11 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Briefcase, Coffee, Heart, Map, Monitor, Star } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Careers | ReInformTech Enterprise",
-  description: "Join our remote-first team of engineers, designers, and strategists building enterprise software.",
-};
+import { JobApplicationModal } from "@/components/sections/JobApplicationModal";
 
 const benefits = [
   { icon: <Monitor className="w-6 h-6" />, title: "Remote-First", desc: "Work from anywhere. We provide a $2k home office stipend." },
@@ -24,6 +22,8 @@ const jobs = [
 ];
 
 export default function CareersPage() {
+  const [selectedJob, setSelectedJob] = useState<string | null>(null);
+
   return (
     <div className="pt-32 pb-24">
       {/* Hero */}
@@ -91,12 +91,18 @@ export default function CareersPage() {
                     <span className="text-[var(--color-muted)] border-l border-[var(--color-border)] pl-3">{job.loc}</span>
                   </div>
                 </div>
-                <Button className="mt-6 md:mt-0 md:w-auto w-full">Apply Now</Button>
+                <Button onClick={() => setSelectedJob(job.title)} className="mt-6 md:mt-0 md:w-auto w-full">Apply Now</Button>
               </div>
             ))}
           </div>
         </Container>
       </section>
+
+      <JobApplicationModal 
+        jobTitle={selectedJob || ""} 
+        isOpen={!!selectedJob} 
+        onClose={() => setSelectedJob(null)} 
+      />
     </div>
   );
 }
