@@ -37,6 +37,15 @@ export default function CareersPage() {
     fetchJobs();
   }, []);
 
+  // Ensure we have enough items to fill the screen for a smooth marquee loop
+  let baseJobs = [...jobs];
+  if (baseJobs.length > 0) {
+    while (baseJobs.length < 8) {
+      baseJobs = [...baseJobs, ...jobs];
+    }
+  }
+  const displayJobs = [...baseJobs, ...baseJobs];
+
   return (
     <div className="pb-24">
       {/* Custom Styles for Marquee */}
@@ -101,8 +110,8 @@ export default function CareersPage() {
             <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[var(--color-background)] to-transparent z-10 hidden md:block" />
             
             <div className="animate-scroll">
-              {/* Double the jobs array to create seamless loop effect */}
-              {[...jobs, ...jobs].map((job, index) => (
+              {/* Repeated array to create seamless loop effect */}
+              {displayJobs.map((job, index) => (
                 <div 
                   key={`${job.id}-${index}`} 
                   className="mx-4 w-[350px] shrink-0 flex flex-col p-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
